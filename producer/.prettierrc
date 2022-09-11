@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc.json",
+  "singleQuote": false,
+  "trailingComma": "es5" 
+}
