@@ -4,6 +4,7 @@ export async function subscribeOrderCreate(js: JetStreamClient) {
   const jsonDecode = JSONCodec();
   const option = consumerOpts();
   option.durable("my-consumer");
+  option.queue(queueGroupName); // use queue along with durable to be allow scale subscription
   option.deliverTo("here");
   option.manualAck();
   option.ackWait(1000);
